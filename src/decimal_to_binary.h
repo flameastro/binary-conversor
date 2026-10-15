@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 char *decimal_to_binary(int number) {
+    // 8 -> 1000
     int size = log2(number) + 1;
     int half = (int)(size / 2);
 

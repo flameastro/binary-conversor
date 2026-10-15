@@ -1,4 +1,3 @@
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -26,10 +25,12 @@ int main() {
     if (choose == 0) {
         return 0;
     } else if (choose == 1) {
-        char binary[50];
+        char binary[33]; // 32 bits (4 bytes) + 1 for '\0'
 
         printf("Binary: ");
-        getchar();
+
+        getchar(); // get \n from scanf
+
         fgets(binary, sizeof(binary), stdin);
         binary[strcspn(binary, "\n")] = '\0';
 
